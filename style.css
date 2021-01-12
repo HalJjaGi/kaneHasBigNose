@@ -3,3 +3,8 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+#output {
+    width: 960px;
+    height: 540px;
+}

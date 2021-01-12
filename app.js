@@ -1,17 +1,16 @@
-let imgElement = document.getElementById("kaneKo");
+const canvas = document.getElementById("output");
+const ctx = canvas.getContext("2d");
+const img = new Image();
+img.src = "kaneKo.png";
+const nose = new Image();
+nose.src = "KoTrans.png";
+let i = 0;
+function enlarge() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(img, 718, 332, 484, 416);
+    ctx.drawImage(nose, 718-i/2, 332-i/2, 484+i, 416+i);
+    console.log("as");
+    i+=2;
+}
 
-let imageURL = "./kaneKo.png";
-let downloadImg = new Image;
-downloadImg.crossOrigin = "Anonymous";
-downloadImg.src = imageURL;
-
-document.querySelector('body').appendChild(downloadImg);
-
-
-
-imgElement.setAttribute("Access-Control-Allow-Origin", "*");
-let mat = cv.imread(imgElement);
-console.log(mat);
-cv.imshow("ouput", mat)
-const exp = 2       // 볼록, 오목 지수 (오목 : 0.1 ~ 1, 볼록 : 1.1~)
-const scale = 1           // 변환 영역 크기 (0 ~ 1), 극좌표에서 반지름에 제한
+const enlargeNose = setInterval(enlarge, 1);
