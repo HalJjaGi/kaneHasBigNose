@@ -3,7 +3,7 @@ const ctx = canvas.getContext("2d");
 const img = new Image();
 img.src = "kaneKo.png";
 const nose = new Image();
-nose.src = "KoFeather.png";
+nose.src = "Ko.png";
 let i = 0;
 function enlarge() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
