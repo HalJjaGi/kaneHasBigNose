@@ -3,7 +3,7 @@ const ctx = canvas.getContext("2d");
 const img = new Image();
 img.src = "kaneKo.png";
 const nose = new Image();
-nose.src = "Ko.png";
+nose.src = "KoFeather.png";
 let i = 0;
 function enlarge() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -15,7 +15,7 @@ function enlarge() {
 
 
 canvas.addEventListener("click", function(e) {
-    clearInterval(start)
+    clearInterval(start);
     const enlargeNose = setInterval(enlarge, 1);
 })
 
